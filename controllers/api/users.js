@@ -2,8 +2,6 @@ const jwt = require('jsonwebtoken');
 const User = require('../../models/user');
 const bcrypt = require('bcrypt');
 
-const SALT_ROUNDS = Number(process.env.SALT_ROUNDS);
-
 async function create(req, res, next) {
     try {
         const user = await User.create(req.body);
